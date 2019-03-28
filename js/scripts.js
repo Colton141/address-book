@@ -4,11 +4,14 @@ $(document).ready(function(){
     var addressInput = $("input#address").val();
     var phoneInput = $("input#phone-number").val();
     var emailInput = $("input#email-address").val();
-    $(".name").text(nameInput);
-    $(".address").text(addressInput);
-    $(".phone").text(phoneInput);
-    $(".email").text(emailInput);
+    $(".name").prepend(nameInput);
+    $(".address").prepend(addressInput);
+    $(".phone").prepend(phoneInput);
+    $(".email").prepend(emailInput);
     event.preventDefault();
+  });
+  $(".name").click(function(){
+    $(".info").toggle();
   });
 });
 
